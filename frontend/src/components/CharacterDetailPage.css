@@ -1,0 +1,268 @@
+.character-detail-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: 'Cinzel', serif;
+}
+
+.detail-header {
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 100%);
+  color: white;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.detail-header .back-button {
+  font-family: 'Cinzel', serif;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  transition: background 0.2s ease;
+}
+
+.detail-header .back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.detail-header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.character-title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.level-badge {
+  background: #e94560;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Cinzel', serif;
+}
+
+.character-title span:not(.level-badge) {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.detail-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.detail-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-section h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: #1a1a2e;
+  border-bottom: 2px solid #e94560;
+  padding-bottom: 0.5rem;
+}
+
+.stats-grid-detail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.stat-score {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.stat-modifier {
+  font-size: 1.25rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.combat-stats-detail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.combat-stat-card {
+  background: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.combat-stat-card .combat-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-family: 'Cinzel', serif;
+}
+
+.combat-stat-card .combat-value-large {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  font-family: 'Cinzel', serif;
+}
+
+.combat-stat-card .combat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f3460;
+  font-family: 'Cinzel', serif;
+}
+
+.equipment-list,
+.spells-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.equipment-item,
+.spell-item {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.equipment-item.equipped {
+  background: #fff7ed;
+  border-color: #f59e0b;
+}
+
+.item-name,
+.spell-name {
+  font-weight: 600;
+  color: #1a1a2e;
+  font-family: 'Cinzel', serif;
+}
+
+.item-quantity {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.equipped-badge {
+  background: #f59e0b;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.spell-details {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 6px;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #1a1a2e;
+  font-family: 'Cinzel', serif;
+}
+
+.info-value {
+  color: #666;
+}
+
+.error-banner {
+  background: #fee;
+  color: #c33;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 2rem;
+  border: 1px solid #fcc;
+  font-family: 'Cinzel', serif;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid-detail {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detail-header h1 {
+    font-size: 2rem;
+  }
+}

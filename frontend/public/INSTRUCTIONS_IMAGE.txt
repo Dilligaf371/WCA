@@ -1,0 +1,28 @@
+========================================
+INSTRUCTIONS POUR INTÉGRER L'IMAGE WCA
+========================================
+
+1. Placez votre image dans ce dossier (frontend/public/)
+
+2. Nommez l'image exactement:
+   - wca-login-bg.png
+   OU
+   - wca-login-bg.jpg
+   OU
+   - wca-login-bg.webp
+
+3. Formats supportés:
+   - PNG (recommandé)
+   - JPG/JPEG
+   - WEBP (meilleure qualité)
+
+4. L'image apparaîtra automatiquement comme arrière-plan
+   du panneau gauche de la page de login.
+
+5. Si l'image ne s'affiche pas:
+   - Vérifiez que le nom est exactement "wca-login-bg.png" (ou .jpg/.webp)
+   - Vérifiez que l'image est bien dans le dossier frontend/public/
+   - Redémarrez le serveur de développement: npm run dev
+   - Videz le cache du navigateur (Ctrl+Shift+R ou Cmd+Shift+R)
+
+========================================

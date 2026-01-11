@@ -1,0 +1,18 @@
+{
+  "name": "warchain-arena-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for WarChain Arena NFT figurines",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:polygon": "hardhat run scripts/deploy.ts --network polygon",
+    "deploy:mumbai": "hardhat run scripts/deploy.ts --network mumbai",
+    "set-minter": "hardhat run scripts/setMinter.ts --network polygon"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1"
+  }
+}

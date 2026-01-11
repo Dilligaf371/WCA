@@ -1,0 +1,54 @@
+import { z } from 'zod';
+declare const envSchema: z.ZodObject<{
+    DATABASE_URL: z.ZodString;
+    PORT: z.ZodDefault<z.ZodNumber>;
+    NODE_ENV: z.ZodDefault<z.ZodEnum<["development", "production", "test"]>>;
+    JWT_SECRET: z.ZodString;
+    JWT_EXPIRES_IN: z.ZodDefault<z.ZodString>;
+    REDIS_URL: z.ZodOptional<z.ZodString>;
+    POLYGON_RPC_URL: z.ZodString;
+    POLYGON_PRIVATE_KEY: z.ZodString;
+    FIGURINE_CONTRACT_ADDRESS: z.ZodOptional<z.ZodString>;
+    IPFS_GATEWAY_URL: z.ZodOptional<z.ZodString>;
+    IPFS_API_URL: z.ZodOptional<z.ZodString>;
+    IPFS_JWT_TOKEN: z.ZodOptional<z.ZodString>;
+    DND_BEYOND_API_URL: z.ZodOptional<z.ZodString>;
+    DND_BEYOND_API_KEY: z.ZodOptional<z.ZodString>;
+    BCRYPT_ROUNDS: z.ZodDefault<z.ZodNumber>;
+}, "strip", z.ZodTypeAny, {
+    DATABASE_URL: string;
+    PORT: number;
+    NODE_ENV: "development" | "production" | "test";
+    JWT_SECRET: string;
+    JWT_EXPIRES_IN: string;
+    POLYGON_RPC_URL: string;
+    POLYGON_PRIVATE_KEY: string;
+    BCRYPT_ROUNDS: number;
+    REDIS_URL?: string | undefined;
+    FIGURINE_CONTRACT_ADDRESS?: string | undefined;
+    IPFS_GATEWAY_URL?: string | undefined;
+    IPFS_API_URL?: string | undefined;
+    IPFS_JWT_TOKEN?: string | undefined;
+    DND_BEYOND_API_URL?: string | undefined;
+    DND_BEYOND_API_KEY?: string | undefined;
+}, {
+    DATABASE_URL: string;
+    JWT_SECRET: string;
+    POLYGON_RPC_URL: string;
+    POLYGON_PRIVATE_KEY: string;
+    PORT?: number | undefined;
+    NODE_ENV?: "development" | "production" | "test" | undefined;
+    JWT_EXPIRES_IN?: string | undefined;
+    REDIS_URL?: string | undefined;
+    FIGURINE_CONTRACT_ADDRESS?: string | undefined;
+    IPFS_GATEWAY_URL?: string | undefined;
+    IPFS_API_URL?: string | undefined;
+    IPFS_JWT_TOKEN?: string | undefined;
+    DND_BEYOND_API_URL?: string | undefined;
+    DND_BEYOND_API_KEY?: string | undefined;
+    BCRYPT_ROUNDS?: number | undefined;
+}>;
+export type Env = z.infer<typeof envSchema>;
+declare let env: Env;
+export { env };
+//# sourceMappingURL=env.d.ts.map
