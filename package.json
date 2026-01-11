@@ -4,7 +4,7 @@
   "description": "Production-grade WarChain Arena platform with NFC figurines, D&D Beyond integration, and Polygon NFT ownership",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc --noEmit false || tsc --skipLibCheck",,
+    "build": "tsc --noEmit false || tsc --skipLibCheck",
     "start": "node dist/server.js",
     "dev": "tsx watch src/server.ts",
     "prisma:generate": "prisma generate",
